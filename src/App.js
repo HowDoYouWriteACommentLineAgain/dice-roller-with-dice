@@ -26,6 +26,7 @@ function App() {
   const [image2, setImage2] = useState(diceFaces[1]);
   const [diceValue1, setDiceValue1] = useState(1);
   const [diceValue2, setDiceValue2] = useState(2);
+  
   function rollDice(){
     let i = 0;
     let n = 12
@@ -63,6 +64,7 @@ function App() {
         <img className="square" src={image2}></img>
       </div>
       <h2>{diceValue1}+{diceValue2} = {diceValue1 + diceValue2}</h2>
+      {diceValue1+diceValue2==2 && <h2><em>Snake Eyes!</em></h2>}
       <button className="btn btn-primary" onClick={()=>rollDice()}>Roll Dice</button>
 
     </div>
